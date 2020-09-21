@@ -4,7 +4,6 @@ jobs:
     docker:
       - image: circleci/php:7.3-node-browsers
     steps:
-      #==========ここから追加==========
       - checkout
       - run: composer install -n --prefer-dist
       - run: npm ci
@@ -12,4 +11,3 @@ jobs:
       - run:
           name: php test
           command: vendor/bin/phpunit
-      #==========ここまで追加==========
