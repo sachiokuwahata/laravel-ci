@@ -6,12 +6,8 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Tests\TestCase;
 
-use App\User;
-
-class SampleTest extends TestCase
+class UserTest extends TestCase
 {
-    use RefreshDatabase;
-
     /**
      * A basic feature test example.
      *
@@ -20,8 +16,7 @@ class SampleTest extends TestCase
     public function testExample()
     {
         $response = $this->get('/');
+
         $response->assertStatus(200);
-
-
     }
 }
